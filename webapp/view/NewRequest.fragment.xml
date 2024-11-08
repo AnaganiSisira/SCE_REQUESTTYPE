@@ -1,0 +1,32 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Dialog title="Add New Request" class="sapUiResponsivePadding--header sapUiResponsivePadding--content sapUiResponsivePadding--footer">
+        <content>
+            <VBox class="sapUiSmallMargin">
+                <!-- Intake Request Type Field -->
+                <HBox>
+                    <Label text="Intake Request Type" width="150px" class="highlightLabel"/>
+                    <Input id="inputIntakeRequestType" placeholder="Enter Intake Request Type" width="100%" />
+                </HBox>
+               
+                <!-- Active Field
+                <HBox class="sapUiSmallMarginTop">
+                    <Label text="Active" width="150px" />
+                    <CheckBox id="checkBoxActive" width="100%" />
+                </HBox> -->
+               
+                <!-- Help Text Field -->
+                <HBox class="sapUiSmallMarginTop">
+                    <Label text="Help Text" width="150px"  class="highlightLabel"/>
+                    <TextArea id="inputHelpText" placeholder="Enter Help Text" rows="3" width="100%" />
+                </HBox>
+            </VBox>
+        </content>
+        <beginButton>
+            <Button text="Submit" type="Emphasized" press=".onSubmit" />
+        </beginButton>
+        <endButton>
+            <Button text="Cancel" press=".onCancel" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>
+ 

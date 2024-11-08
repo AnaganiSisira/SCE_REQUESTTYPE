@@ -1,0 +1,74 @@
+.customMargin {
+    gap: 1.5rem;
+    width: 100%; 
+    margin-bottom: 1rem;/* Ensures the HBox expands to fill available space */
+}
+
+.custom {
+    align-items: flex-end; /* Align buttons to the bottom */
+    margin-left: auto; /* Align buttons to the right */
+}
+
+.Bowser {
+    margin-top: 1rem;
+    margin-left: auto;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+/* Media query for tablet view (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .customMargin {
+        gap: 1rem; /* Reduced gap for smaller screens */
+        flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+    }
+
+    .custom {
+        margin-left: 0; /* Remove margin on smaller screens */
+        justify-content: center; /* Center buttons on tablet view */
+    }
+
+    .Bowser {
+        margin-left: 0; /* Adjust for tablet */
+        justify-content: center; /* Center file uploader */
+    }
+}
+
+/* Media query for mobile view (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .customMargin {
+        gap: 0.5rem;
+        flex-direction: column; /* Stack the elements vertically */
+        width: 100%;
+    }
+
+    .custom {
+        margin-left: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Bowser {
+        margin-left: 0;
+        margin-top: 0.5rem;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+/* Add your custom margin for top spacing */
+.sapUiSmallMarginTop {
+    margin-top: 10px;
+    font-weight: bold;
+}
+ 
+/* Custom CSS for highlighted label */
+.highlightLabel {
+    font-weight: bold;
+    color: black; /* Use a color that aligns with the application's theme */
+}
+
+
+  

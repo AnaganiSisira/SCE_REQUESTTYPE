@@ -1,0 +1,126 @@
+{
+
+"Object": [
+    {
+        "KEY": "1001",
+        "IntakeRequestType": "RFx",
+        "ACTIVE": true,
+        "HelpText": "I - text help"
+    },
+    {
+        "KEY": "1002",
+        "IntakeRequestType": "Contract Negotiations",
+        "ACTIVE": true,
+        "HelpText": "NDA, POC, MA, EIX Letter Etc."
+    },
+    {
+        "KEY": "1003",
+        "IntakeRequestType": "Contract Amendment",
+        "ACTIVE": true,
+        "HelpText": "Payment Term, Comp. Name Change"
+    },
+    {
+        "KEY": "1004",
+        "IntakeRequestType": "Purchase Order",
+        "ACTIVE": true,
+        "HelpText": ""
+    },
+    {
+        "KEY": "1005",
+        "IntakeRequestType": "Change Order",
+        "ACTIVE": true,
+        "HelpText": "Price/Quantity Change, Scope Change, Funds Changes, Date Change, Item Agreement Change"
+    },
+    {
+        "KEY": "1006",
+        "IntakeRequestType": "Supplier Qualification Request",
+        "ACTIVE": true,
+        "HelpText": "Supplier Qualification form in ARIBA - MDG Interface? (Nidhi Meeting MDG)"
+    },
+    {
+        "KEY": "1007",
+        "IntakeRequestType": "Vendor Master Update",
+        "ACTIVE": true,
+        "HelpText": "Change in name/address, Payment terms, W2 etc., MDG Interface? (Nidhi meeting MDG)"
+    },
+    {
+        "KEY": "1008",
+        "IntakeRequestType": "Other",
+        "ACTIVE": true,
+        "HelpText": "Scorecards, Contractor meetings"
+    },
+    {
+        "KEY": "1009",
+        "IntakeRequestType": "Category deepdives",
+        "ACTIVE": true,
+        "HelpText": "Spend Analytics, Category strategy"
+    },
+    {
+        "KEY": "1010",
+        "IntakeRequestType": "Supplier Performance",
+        "ACTIVE": true,
+        "HelpText": "Warranty Claims (meeting on Monday)"
+    },
+    {
+        "KEY": "1011",
+        "IntakeRequestType": "PR",
+        "ACTIVE": true,
+        "HelpText": ""
+    },
+    {
+        "KEY": "1012",
+        "IntakeRequestType": "New Supplier Registration",
+        "ACTIVE": true,
+        "HelpText": ""
+    },
+    {
+        "KEY": "1013",
+        "IntakeRequestType": "Worker Request",
+        "ACTIVE": false,
+        "HelpText": ""
+    },
+    {
+        "KEY": "1014",
+        "IntakeRequestType": "Operational Issues",
+        "ACTIVE": true,
+        "HelpText": ""
+    },
+    {
+        "KEY": "1015",
+        "IntakeRequestType": "IT Request",
+        "ACTIVE": true,
+        "HelpText": "System access, password resets"
+    },
+    {
+        "KEY": "1016",
+        "IntakeRequestType": "Invoice Disputes",
+        "ACTIVE": false,
+        "HelpText": "Incorrect charges, refund requests"
+    },
+    {
+        "KEY": "1017",
+        "IntakeRequestType": "Logistics Issue",
+        "ACTIVE": true,
+        "HelpText": "Shipping delays, incorrect address"
+    },
+    {
+        "KEY": "1018",
+        "IntakeRequestType": "Compliance Review",
+        "ACTIVE": true,
+        "HelpText": "Policy adherence, regulatory checks"
+    },
+    {
+        "KEY": "1019",
+        "IntakeRequestType": "Customer Feedback",
+        "ACTIVE": true,
+        "HelpText": "Feedback on products/services"
+    },
+    {
+        "KEY": "1020",
+        "IntakeRequestType": "Internal Audit",
+        "ACTIVE": false,
+        "HelpText": "Annual review, financial audits"
+    }
+]
+
+}

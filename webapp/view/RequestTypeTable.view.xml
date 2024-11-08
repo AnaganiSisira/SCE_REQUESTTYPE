@@ -1,0 +1,170 @@
+<mvc:View
+    controllerName="requesttype.controller.RequestTypeTable"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:m="sap.m"
+    xmlns:f="sap.f"
+    xmlns:core="sap.ui.core"
+    xmlns:fb="sap.ui.comp.filterbar"
+    xmlns:svm="sap.ui.comp.smartvariants"
+    xmlns:table="sap.ui.table"
+    xmlns:rowmodes="sap.ui.table.rowmodes"
+    xmlns:u="sap.ui.unified"
+>
+    <Page
+        id="page"
+        showFooter="true"
+    >
+
+    <Panel>
+        <HBox class="customMargin">
+            <MultiComboBox
+                selectionChange="handleSelectionChange"
+                selectionFinish="handleSelectionFinish"
+                placeholder="Select Request Type"
+                width="250px"
+                items="{ path: 'dataModel>/Object' }"
+            >
+                <core:Item
+                    key="{dataModel>KEY}"
+                    text="{dataModel>IntakeRequestType}"
+                />
+            </MultiComboBox>
+            <MultiComboBox
+                selectionChange="handleSelectionChange"
+                selectionFinish="handleSelectionFinish"
+                placeholder="Select Active"
+                width="250px"
+                items="{ path: 'dataModel>/Object' }"
+            >
+                <core:Item
+                    key="{dataModel>KEY}"
+                    text="{dataModel>ACTIVE}"
+                />
+            </MultiComboBox>
+            <u:FileUploader change="handleUpload" />
+            <ToolbarSpacer />
+            <HBox class="custom">
+                <Button
+                    icon="sap-icon://refresh"
+                    tooltip="Refresh Data"
+                    press="onRefresh"
+                    type="Transparent"
+                />
+
+                <Button
+                    icon="sap-icon://add"
+                    tooltip="Add New Data"
+                    press="onAdd"
+                    type="Transparent"
+                />
+                <Button
+                    icon="sap-icon://excel-attachment"
+                    tooltip="Export to Excel"
+                    press="onExport"
+                    type="Transparent"
+                />
+                <Button
+                    icon="sap-icon://edit"
+                    tooltip="Edit Selected"
+                    press="onEdit"
+                    type="Transparent"
+                />
+                <Button
+                    icon="sap-icon://delete"
+                    tooltip="Delete"
+                    type="Transparent"
+                    press="onDeleteRow"
+                />
+            </HBox>
+        </HBox>
+</Panel>
+        <content>
+            <table:Table
+                class="RequestTable"
+                id="reuestTypeTable"
+                selectionMode="MultiToggle"
+                rows="{dataModel>/Object}"
+                ariaLabelledBy="title"
+            >
+                <table:rowMode>
+                    <rowmodes:Fixed rowCount="15" />
+                </table:rowMode>
+                <table:columns>
+                    <table:Column
+                        width="20rem"
+                        id="RequestType"
+                    >
+                        <Label text="IntakeRequestType" />
+                        <table:template>
+                            <m:Input
+                                value="{dataModel>IntakeRequestType}"
+                                editable="{viewModel>/isEditMode}"
+                            />
+                        </table:template>
+                    </table:Column>
+
+                    <table:Column
+                        width="7rem"
+                        id="Active"
+                    >
+                        <m:Label text="ACTIVE" />
+                        <table:template>
+                            <m:CheckBox
+                                selected="{path: 'dataModel>ACTIVE', formatter: '.formatBoolean'}"
+                            />
+                        </table:template>
+                    </table:Column>
+
+                    <table:Column id="HelpText">
+                        <Label text="HelpText" />
+                        <table:template>
+                            <m:Input
+                                value="{dataModel>HelpText}"
+                                editable="{viewModel>/isEditMode}"
+                            />
+                        </table:template>
+                    </table:Column>
+                </table:columns>
+            </table:Table>
+        </content>
+
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button
+                    type="Accept"
+                    text="Save"
+                    press="onsave"
+                />
+                <Button
+                    type="Reject"
+                    text="Cancel"
+                    press="oncancel"
+                />
+            </Toolbar>
+        </footer>
+    </Page>
+
+    <!-- Delete Confirmation Dialog -->
+    <Dialog
+        id="deleteConfirmDialog"
+        title="Delete Confirmation"
+        type="Message"
+    >
+        <Text text="Are you sure you want to delete the selected rows?" />
+        <beginButton>
+            <Button
+                text="Yes"
+                press="onConfirmDelete"
+            />
+        </beginButton>
+        <endButton>
+            <Button
+                text="No"
+                press="onCancelDelete"
+            />
+        </endButton>
+    </Dialog>
+</mvc:View>
