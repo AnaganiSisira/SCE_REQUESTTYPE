@@ -19,33 +19,18 @@
 
     <Panel>
         <HBox class="customMargin">
-            <MultiComboBox
-                selectionChange="handleSelectionChange"
-                selectionFinish="handleSelectionFinish"
-                placeholder="Select Request Type"
-                width="250px"
-                items="{ path: 'dataModel>/Object' }"
-            >
-                <core:Item
-                    key="{dataModel>KEY}"
-                    text="{dataModel>IntakeRequestType}"
-                />
-            </MultiComboBox>
-            <MultiComboBox
-                selectionChange="handleSelectionChange"
-                selectionFinish="handleSelectionFinish"
-                placeholder="Select Active"
-                width="250px"
-                items="{ path: 'dataModel>/Object' }"
-            >
-                <core:Item
-                    key="{dataModel>KEY}"
-                    text="{dataModel>ACTIVE}"
-                />
-            </MultiComboBox>
             <u:FileUploader change="handleUpload" />
             <ToolbarSpacer />
             <HBox class="custom">
+            <SearchField
+    id="searchField"
+    width="90%"
+    placeholder="Search for..."
+    search=".onSearch"
+    liveChange=".onLiveChange"
+/>
+
+          
                 <Button
                     icon="sap-icon://refresh"
                     tooltip="Refresh Data"
@@ -71,12 +56,12 @@
                     press="onEdit"
                     type="Transparent"
                 />
-                <Button
-                    icon="sap-icon://delete"
-                    tooltip="Delete"
-                    type="Transparent"
-                    press="onDeleteRow"
-                />
+<Button
+    icon="sap-icon://delete"
+    tooltip="Delete"
+    type="Transparent"
+    press="onDeleteRow"
+/>
             </HBox>
         </HBox>
 </Panel>
@@ -146,25 +131,23 @@
             </Toolbar>
         </footer>
     </Page>
-
-    <!-- Delete Confirmation Dialog -->
-    <Dialog
-        id="deleteConfirmDialog"
-        title="Delete Confirmation"
-        type="Message"
-    >
-        <Text text="Are you sure you want to delete the selected rows?" />
-        <beginButton>
-            <Button
-                text="Yes"
-                press="onConfirmDelete"
-            />
-        </beginButton>
-        <endButton>
-            <Button
-                text="No"
-                press="onCancelDelete"
-            />
-        </endButton>
-    </Dialog>
+  <!-- Delete Confirmation Dialog -->
+<Dialog
+    id="deleteConfirmDialog"
+    title="Delete Confirmation"
+    type="Message">
+    <Text text="Are you sure you want to delete the selected rows?" />
+    <beginButton>
+        <Button
+            text="Yes"
+            press="onConfirmDelete"
+        />
+    </beginButton>
+    <endButton>
+        <Button
+            text="No"
+            press="onCancelDelete"
+        />
+    </endButton>
+</Dialog>
 </mvc:View>
